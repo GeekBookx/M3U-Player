@@ -1,0 +1,12 @@
+{
+  "name": "m3u8-web-player",
+  "version": "1.0.0",
+  "description": "Node.js M3U8 Player with Strict Error Handling",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJS M3U8 播放器</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+
+    <div class="header">
+        <input type="text" id="m3uInput" placeholder="输入 .m3u8 单链或包含多个频道的 .m3u 列表链接" />
+        <button onclick="loadSource()">加载资源</button>
+        <span id="statusMsg">等待操作...</span>
+    </div>
+
+    <div class="container">
+        <div class="player-section">
+            <div class="video-wrapper">
+                <video id="video" controls playsinline></video>
+                <div id="errorOverlay" class="error-overlay" style="display: none;">
+                    <div class="error-content">
+                        <h3>播放错误</h3>
+                        <p id="errorDetail">无法连接资源</p>
+                        <button onclick="retryPlayback()">尝试重连</button>
+                    </div>
+                </div>
+            </div>
+            <div class="current-info">
+                正在播放: <span id="currentTitle">无</span>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="sidebar-header">频道列表</div>
+            <ul id="channelList">
+                <li class="empty-tip">暂无频道，请在上方加载 M3U 链接</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
