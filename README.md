@@ -1,4 +1,4 @@
-`本项目由Gemini生成。`
+本项目由Gemini生成。
 
 ```
 git clone https://github.com/GeekBookx/M3U-Player.git
